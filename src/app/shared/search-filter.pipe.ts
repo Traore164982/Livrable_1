@@ -10,10 +10,8 @@ export class SearchFilterPipe implements PipeTransform {
     if(!value || filterString==''){
       return value;
     }
-    value.forEach((element:any)=> {
-      console.log(element,'traaaaa');
-      
-      if(element.title.includes(filterString)){
+    value.forEach((element:any)=> {      
+      if(element.title.toLowerCase().includes(filterString.toLowerCase())){
         results.push(element);
       }
     });
