@@ -60,9 +60,7 @@ export class PlaylistPage implements OnInit {
     })
   }
 
-  filterSearch(event: any){
-    console.log(event);
-    
+  filterSearch(event: any){    
     this.searchFilter=(event.target as HTMLInputElement).value;
     this.recherche.next(this.searchFilter); 
   }
@@ -71,6 +69,7 @@ export class PlaylistPage implements OnInit {
     if(this.inputFired){
       return;
     }
+
     this.inputFired = true;
     const titleToolbar = this.condenseheader.nativeElement.children[0]
 
